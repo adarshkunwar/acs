@@ -1,5 +1,6 @@
 import './App.css';
-import LoggedIn from './Components/LoggedIn';
+import Complain from './Components/LoggedIn/Complain';
+// import LoggedIn from './Components/LoggedIn';
 // import Login from './Components/Login';
 // import Landing from './Components/Landing';
 
@@ -8,7 +9,8 @@ function App() {
       <div>
         {/* <Landing/> */}
         {/* <Login/> */}
-        <LoggedIn/>
+        {/* <LoggedIn/> */}
+        <Complain/>
       </div>
     );
 }
