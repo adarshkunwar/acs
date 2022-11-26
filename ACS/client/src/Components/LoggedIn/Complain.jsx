@@ -1,79 +1,88 @@
 import React from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 const Complain = () => {
   return (
-    <div className=" w-screen bg-green-300">
+    <div className="h-screen flex items-center justify-center">
       {/* form and image preview */}
       <div className="grid grid-cols-3 px-40 py-10">
         {/* form here */}
         <form action="" className="col-span-2">
-          <div className="bg-red-300  space-y-3 locked-inner">
-            <div className="flex text-xl items-center space-x-2 locked-inner w-fit b-100">
-              <label htmlFor="yourName"> Tapaiko naam?</label>
-              <input
-                type="text"
-                name="yourName"
-                id="yourName"
-                className="border-2 w-96 px-5 py-1 b-100"
-                // value="this is placed by default"
+          <div className="flex-col  space-y-3 locked-inner rounded-xl">
+            {/* name */}
+            <div>
+              <TextField
+                required
+                id="standard-required"
+                label="your Name"
+                className="w-96"
+                variant="standard"
               />
             </div>
-
-            <div className="flex text-xl items-center space-x-2 locked-inner w-fit b-100">
-              <label htmlFor="title">Aarop</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                className="border-2 px-5 py-1 b-100"
+            <div>
+              {/* title */}
+              <TextField
+                required
+                id="standard-required"
+                label="title"
+                className="w-[30rem]"
+                variant="standard"
               />
             </div>
-            <div className="flex text-xl items-center space-x-2 locked-inner w-fit b-100">
-              <label htmlFor="targetName">Aarop garne vyakti</label>
-              <input
-                type="text"
-                name="targetName"
-                id="targetName"
-                className="border-2 px-5 py-1 b-100"
+            {/* target */}
+            <div>
+              <TextField
+                required
+                id="standard-required"
+                label="Your target"
+                variant="standard"
               />
             </div>
-            <div className="flex text-xl items-center space-x-2 locked-inner w-fit b-100">
-              <label htmlFor="position">Usko position</label>
-              <input
-                type="text"
-                name="position"
-                id="posiotion"
-                className="border-2 px-5 py-1 b-100"
+            {/* position */}
+            <div>
+              <TextField
+                required
+                id="standard-required"
+                label="position of the target"
+                variant="standard"
               />
             </div>
-            <div className="flex text-xl items-center space-x-2 locked-inner w-fit b-100">
-              <label htmlFor="location">aarop vaeko thau</label>
-              <input
-                type="text"
-                name="location"
-                id="location"
-                className="border-2 px-5 py-1 b-100"
+            {/* location */}
+            <div>
+              <TextField
+                required
+                id="standard-required"
+                label="location of the encounter"
+                variant="standard"
               />
             </div>
-            <div className="flex text-xl items-center space-x-2 locked-inner w-fit rounded-xl">
-              <label htmlFor="yourName">briskrit jankari</label>
-              <textarea
-                name="description"
-                id="description"
-                cols="60"
-                rows="10"
-                className="border locked-inner px-5 py-1 rounded-xl"
-              ></textarea>
+            <div>
+              <TextField
+                id="standard-multiline-static"
+                label="description"
+                multiline
+                // rows={4}
+                className="w-96"
+                variant="standard"
+              />
+            </div>
+            {/* image upload */}
+            <div>
+              <Button variant="contained" component="label">
+                Upload the image
+                <input hidden accept="image/*" multiple type="file" />
+              </Button>
             </div>
             <div className="flex justify-end">
-              <button type="submit" className="bigbtn">
+              <button type="submit" className="bigbtn bg-yellow-300">
                 Submit
               </button>
             </div>
           </div>
         </form>
-        <div className="h-96 bg-blue-300 flex jusify-center items-center text-2xl">
-          <div>Image is posted and previewed here</div>
+        <div className="h-96 border-2 flex locked-inner rounded-3xl jusify-center items-center text-2xl">
+          <div>Image is previewed here</div>
           <img src="" alt="" />
         </div>
       </div>
